@@ -57,6 +57,9 @@ if __name__ == "__main__":
         print(f"{i}. {chatbot.title[i]}")
 
     title = input("[Master Bot] What is your title? --> ")
-    question = input("[Master Bot] What is your question? --> ")
     chatbot.training_bot(title)
-    print(chatbot.response(question=question))
+    while True:
+        question = input("[Master Bot] What is your question? --> ")
+        if question == "exit":
+            break
+        print(chatbot.response(question=question))
