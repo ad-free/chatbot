@@ -17,7 +17,7 @@ class ChatBotMaster:
     def load_data() -> list:
         with open("datasets/dev-v1.1.json", "r") as file:
             data = json.loads(file.read())
-        return data.get("data", {})
+        return data["data"]
 
     def download_data(self, url: str = None) -> None:
         pass
@@ -31,29 +31,32 @@ class ChatBotMaster:
     def training_bot(self, title: str = None):
         if not title:
             return False
+        result = []
 
         if title in self.title:
             for t in self.data:
-                if t == t["title"]:
-                    paragraphs = t["paragraphs"]
-                    question = []
-                    answer = []
-                    for c in paragraphs["qas"]:
-                        question.append(c["question"])
-                        answer.append(c["answers"])
-                    result = question + answer
-                    self.trainner.train(result)
+                if title == t["title"]:
+                    for paragraph in t["paragraphs"]:
+                        for qas in paragraph["qas"]:
+                            answer = qas["answers"][0]
+                            result.append(qas["question"])
+                            result.append(answer["text"])
+        self.trainner.train(result)
 
     def response(self, question: str = None):
         if not question:
             question = "Hi, can I help you?"
-        return self.chatbot.get_response(question)
+        return f"[Master Bot] {self.chatbot.get_response(question)}"
 
 
 if __name__ == "__main__":
     chatbot = ChatBotMaster()
     chatbot.processing_data()
-    title = input("What is your title?\n")
-    question = input("What is your question?\n")
+
+    for i in range(len(chatbot.title)):
+        print(f"{i}. {chatbot.title[i]}")
+
+    title = input("[Master Bot] What is your title? --> ")
+    question = input("[Master Bot] What is your question? --> ")
     chatbot.training_bot(title)
     print(chatbot.response(question=question))
