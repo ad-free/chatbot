@@ -1,6 +1,17 @@
 # Chatbot Guide
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-![Lines of code](https://img.shields.io/tokei/lines/github/ad-free/chatbot) ![GitHub repo size](https://img.shields.io/github/repo-size/ad-free/chatbot) ![GitHub pull requests](https://img.shields.io/github/issues-pr/ad-free/chatbot) ![GitHub](https://img.shields.io/github/license/ad-free/chatbot)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+![Lines of code](https://img.shields.io/tokei/lines/github/ad-free/chatbot) ![GitHub repo size](https://img.shields.io/github/repo-size/ad-free/chatbot) ![GitHub pull requests](https://img.shields.io/github/issues-pr/ad-free/chatbot) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+## Features
+
+|Versions | Description| Status |
+|---------|------------|--------|
+| v1      | Simple chat with chatbot | ![Completed](https://img.shields.io/badge/-Done-brightgreen) |
+| v2      | Create web application   | ![Pending](https://img.shields.io/badge/-Pending-red) |
+| v3      | Build and deploy with **Docker** | ![Pending](https://img.shields.io/badge/-Pending-red) |
+| v3      | Build and deploy with **Kubernetes | ![Pending](https://img.shields.io/badge/-Pending-red) |
 
 ## Setup
 
