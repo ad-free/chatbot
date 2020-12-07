@@ -1,2 +1,4 @@
 [requires] # Here goes your required Python version.
 python_version = "3.8.6"
+[packages]
+python = "3.8.6"
