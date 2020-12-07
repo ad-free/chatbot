@@ -1,7 +1,7 @@
 # Chatbot Guide
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![Python version](https://img.shields.io/badge/python-3.8.6-blue.svg)](https://www.python.org/downloads/release/python-386/)
 ![Lines of code](https://img.shields.io/tokei/lines/github/ad-free/chatbot) ![GitHub repo size](https://img.shields.io/github/repo-size/ad-free/chatbot) ![GitHub pull requests](https://img.shields.io/github/issues-pr/ad-free/chatbot) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 ## Features
