@@ -11,7 +11,7 @@
 | v1      | Simple chat with chatbot | ![Completed](https://img.shields.io/badge/-Done-brightgreen) |
 | v2      | Create web application   | ![Pending](https://img.shields.io/badge/-Pending-red) |
 | v3      | Build and deploy with **Docker** | ![Pending](https://img.shields.io/badge/-Pending-red) |
-| v3      | Build and deploy with **Kubernetes | ![Pending](https://img.shields.io/badge/-Pending-red) |
+| v3      | Build and deploy with **Kubernetes** | ![Pending](https://img.shields.io/badge/-Pending-red) |
 
 ## Setup
 
