@@ -8,6 +8,7 @@ class ChatBotMaster:
     def __init__(self, data: list = None):
         if data is None:
             self.download_data()
+
         self.data = self.load_data()
         self.title = []
         self.chatbot = ChatBot("Bot Master")
@@ -15,7 +16,7 @@ class ChatBotMaster:
 
     @staticmethod
     def load_data() -> list:
-        with open("datasets/dev-v1.1.json", "r") as file:
+        with open("datasets/data.json", "r") as file:
             data = json.loads(file.read())
         return data["data"]
 
@@ -29,18 +30,15 @@ class ChatBotMaster:
         return True
 
     def training_bot(self, title: str = None) -> None:
-        if not title:
+        if not title or title not in self.title:
             return False
         result = []
 
-        if title in self.title:
-            for t in self.data:
-                if title == t["title"]:
-                    for paragraph in t["paragraphs"]:
-                        for qas in paragraph["qas"]:
-                            answer = qas["answers"][0]
-                            result.append(qas["question"])
-                            result.append(answer["text"])
+        for t in self.data:
+            if title == t["title"]:
+                for qas in t["qas"]:
+                    result.append(qas["question"])
+                    result.append(qas["answers"])
         self.trainner.train(result)
 
     def response(self, question: str = None) -> str:
