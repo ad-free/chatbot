@@ -37,10 +37,10 @@ install:
 jobs:
   include:
     - stage: test
-      script: &test-api
+      script: &testApi
         - echo "Test Stage"
     - stage: deploy
-      <<: *test-api
+      <<: *testApi
       if: branch = master
       script:
         - echo $TRAVIS_BRANCH
